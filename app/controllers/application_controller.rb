@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
   helper_method :current_user
 
   def current_user
-    session[:name]
+    session[:name] ? session[:name] : nil
   end
 
 end

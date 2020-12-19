@@ -12,7 +12,7 @@ class SessionsController < ApplicationController
     if session[:name]
       redirect_to "/secrets/show"
     elsif name && name != ""
-      current_user = name
+      session[:name] = name
       redirect_to "/secrets/show"
     else
       redirect_to "/sessions/new"
@@ -21,7 +21,7 @@ class SessionsController < ApplicationController
 
   def destroy
     if current_user
-      current_user = nil
+      session[:name] = nil
     end
   end
 
