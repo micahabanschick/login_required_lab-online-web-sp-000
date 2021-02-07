@@ -5,7 +5,11 @@ class ApplicationController < ActionController::Base
   helper_method :current_user
 
   def current_user
+<<<<<<< HEAD
     session[:name] ? session[:name] : nil
+=======
+    session[:name]
+>>>>>>> 6583a554f99bf6ba7683138c2fbb65d0a1cc054e
   end
 
 end
